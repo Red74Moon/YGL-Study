@@ -13,10 +13,14 @@ using namespace std;
 
 int main()
 {
+	// 점수가 입력 될 배열
 	int Arr[4] = {};
-	string ClassArr[4] = { "국어", "영어", "수학" , "과학" };
-	float Sum = 0.0;
 
+	// 과목 배열
+	string ClassArr[4] = { "국어", "영어", "수학" , "과학" };
+
+	// 새로운 점수들의 합계 변수
+	float Sum = 0.0; 
 
 	cout << "국어 점수를 입력하세요 : ";
 	cin >> Arr[0]; //Korean
@@ -29,7 +33,7 @@ int main()
 
 	cout << endl;
 
-	//최대값 구하기
+	//입력된 점수들의 최대점수 구하기
 	int Max = Arr[0];
 	for (int i = 0; i < 4; ++i)
 	{
@@ -42,21 +46,21 @@ int main()
 	cout << endl << "최고 점수는 " << Max << "입니다. 이 점수를 기준으로 " << endl<< endl;;
 
 	//과목별 점수 재계산
-	//모든 점수를 점수 / M100으로 고쳤다.
-
+	//모든 점수를 (점수 / 최대점수 ) * 100으로 새롭게 평균을 내어 출력 후 배열에 입력
 	for (int i = 0; i < 4; ++i)
 	{
 		float newAvgr = (Arr[i] / (float)Max) * 100;
 		cout << ClassArr[i] << "의 새로운 점수는 " << newAvgr << "입니다. " << endl;
 		Arr[i] = newAvgr;
 	}
-
+	
+	// 배열에 입력된 점수들의 총 합
 	for (int i = 0; i < 4; ++i)
 	{
 		Sum += Arr[i];
 	}
 
-	cout << endl << endl << "새로운 점수의 평균은 " <<  Sum / 4 << "점 입니다." << endl << endl;
+	cout << endl << endl << "새로운 점수들의 평균은 " <<  Sum / 4 << "점 입니다." << endl << endl;
 
 	return 0;
 }
