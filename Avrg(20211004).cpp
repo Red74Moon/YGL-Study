@@ -37,18 +37,16 @@ int main()
 		}
 	}
 
-	for (int i = 0; i < 4; ++i)
-	{
-		cout << ClassArr[i] << "의 점수는 " << Arr[i] << "입니다." << endl;
-	}
-
-	cout << endl << "최고 점수는 " << Max << "입니다." << endl;
+	cout << endl << "최고 점수는 " << Max << "입니다." << endl<< endl;;
 
 	//과목별 점수 재계산
+	//모든 점수를 점수 / M100으로 고쳤다.
 
-
-	cout << endl << "평균 점수는 " << Max << "입니다." << endl;
-
+	for (int i = 0; i < 4; ++i)
+	{
+		float a = (Arr[i] / (float)Max) * 100;
+		cout << ClassArr[i] << "의 평균 점수는 " << a << "입니다." << endl;
+	}
 
 	return 0;
 }
