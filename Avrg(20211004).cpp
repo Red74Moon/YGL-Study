@@ -15,6 +15,8 @@ int main()
 {
 	int Arr[4] = {};
 	string ClassArr[4] = { "국어", "영어", "수학" , "과학" };
+	float Sum = 0.0;
+
 
 	cout << "국어 점수를 입력하세요 : ";
 	cin >> Arr[0]; //Korean
@@ -37,16 +39,24 @@ int main()
 		}
 	}
 
-	cout << endl << "최고 점수는 " << Max << "입니다." << endl<< endl;;
+	cout << endl << "최고 점수는 " << Max << "입니다. 이 점수를 기준으로 " << endl<< endl;;
 
 	//과목별 점수 재계산
 	//모든 점수를 점수 / M100으로 고쳤다.
 
 	for (int i = 0; i < 4; ++i)
 	{
-		float a = (Arr[i] / (float)Max) * 100;
-		cout << ClassArr[i] << "의 평균 점수는 " << a << "입니다." << endl;
+		float newAvgr = (Arr[i] / (float)Max) * 100;
+		cout << ClassArr[i] << "의 새로운 점수는 " << newAvgr << "입니다. " << endl;
+		Arr[i] = newAvgr;
 	}
+
+	for (int i = 0; i < 4; ++i)
+	{
+		Sum += Arr[i];
+	}
+
+	cout << endl << endl << "새로운 점수의 평균은 " <<  Sum / 4 << "점 입니다." << endl << endl;
 
 	return 0;
 }
