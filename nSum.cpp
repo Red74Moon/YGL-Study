@@ -1,3 +1,4 @@
+
 //정수 n개가 주어졌을 때, n개의 합을 구하는 함수를 작성하시오.
 //
 //작성해야 하는 함수는 다음과 같다.
@@ -16,15 +17,13 @@ int main()
 
 	int arr_size; // 배열의 크기를 입력받을 변수
 
-	string orgNums;
-
 	cout << "입력할 정수의 개수를 입력하세요 : ";
 
 	cin >> arr_size; // 배열의 크기를 입력받음
 
 	Arr = new int[arr_size]; // 입력받은 크기만큼 배열을 동적 생성
 
-	if (!Arr) 
+	if (!Arr)
 	{
 		cout << "메모리를 할당할 수 없습니다." << endl;
 		return 0;
@@ -36,9 +35,11 @@ int main()
 		cout << "입력된 값이 없습니다." << endl << endl;
 		return 0;
 	}
-	
+
+	//입력할 정수의 개수 입력
 	cout << "입력할 정수 " << arr_size << "개수 만큼 입력하세요.(스페이스로 구분)" << endl;
-	
+
+	//입력한 정수를 배열에 저장
 	for (int i = 0; i < arr_size; ++i)
 	{
 		cin >> Arr[i];
@@ -56,10 +57,9 @@ int main()
 		cout << Arr[i] << " ";
 	}
 	cout << " 의 합은 ";
-	cout << Sum <<" 입니다." << endl;
-	END:
+	cout << Sum << " 입니다." << endl;
+
 	delete[] Arr;
 
 	return 0;
- }
-
+}
