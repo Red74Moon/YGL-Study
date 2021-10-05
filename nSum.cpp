@@ -38,20 +38,25 @@ int main()
 	}
 	
 	cout << "입력할 정수 " << arr_size << "개수 만큼 입력하세요.(스페이스로 구분)" << endl;
-	cin >> 
-	for (int i = 1; i < arr_size; ++i)
+	
+	for (int i = 0; i < arr_size; ++i)
 	{
-
+		cin >> Arr[i];
 	}
 
-	cout << orgNums << endl;
 	//배열에 입력된 값 더하기
-	//for (int i = 0; i < arr_size; ++i)
-	//{
-	//	Sum += Arr[i];
-	//}
-
-	//cout << Sum << endl;
+	for (int i = 0; i < arr_size; ++i)
+	{
+		Sum += Arr[i];
+	}
+	cout << endl << endl;
+	cout << "입력된 값 ";
+	for (int i = 0; i < arr_size; ++i)
+	{
+		cout << Arr[i] << " ";
+	}
+	cout << " 의 합은 ";
+	cout << Sum <<" 입니다." << endl;
 	END:
 	delete[] Arr;
 

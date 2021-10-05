@@ -24,7 +24,7 @@ int main() {
 		}
 	}
 
-	for (int i = 0; i <= cnt+1; ++i)
+	for (int i = 0; i <= cnt; ++i)
 	{
 		cout << i + 1 << " ¹øÂ° :" << list[i] << endl;
 	}
