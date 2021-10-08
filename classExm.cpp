@@ -7,10 +7,34 @@
 
 
 #include <iostream>
+#include <cstring>
 
 using namespace std;
 
+class Monster
+{
+public:
+	void Info(int, int, string);
+
+private:
+	int HP;
+	int MP;
+	string Skill;
+};
+
 int main()
 {
+	Monster Monster1;
+
+	Monster1.Info(100, 50, "ThunderBolt");
+
 	return 0;
+}
+
+void Monster::Info(int i, int j, string c)
+{
+	HP = i;
+	MP = j;
+	Skill = c;
+	cout << i << '\t' << j << '\t' << c << endl;
 }
