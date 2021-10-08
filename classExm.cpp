@@ -14,6 +14,8 @@ using namespace std;
 class Monster
 {
 public:
+	Monster();
+	~Monster();
 	void Info(int, int, string);
 
 private:
@@ -29,6 +31,14 @@ int main()
 	Monster1.Info(100, 50, "ThunderBolt");
 
 	return 0;
+}
+
+Monster::Monster()
+{
+}
+
+Monster::~Monster()
+{
 }
 
 void Monster::Info(int i, int j, string c)
