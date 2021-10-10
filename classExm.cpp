@@ -5,22 +5,35 @@ using namespace std;
 class Character
 {
 public:
-	Character* getThis();
+	Character(int _hp)
+	{
+		hp = _hp;
+	}
+
+private:
+	int hp;
+
+public:
+	int getHp();
+	void operator+=(int hp);
 };
 
 
 int main()
 {
-	Character mario;
-	Character* marioPtr = &mario;
+	Character mario(150);
+	mario += 50;
 
-	cout << "marioPtr  : " << marioPtr << endl;
-	cout << "marioThis : " << mario.getThis() << endl;
-
+	cout << mario.getHp() << endl;
 	return 0;
 }
 
-Character* Character::getThis()
+int Character::getHp()
 {
-	return this;
+	return hp;
+}
+
+void Character::operator+=(int hp)
+{
+	this->hp += hp;
 }
