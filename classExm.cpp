@@ -22,10 +22,11 @@ public:
 
 int main()
 {
-	Character mario(150);
+	Character mario(150), mario2(0);
 	mario += 50;
+	mario2 = mario;
 
-	cout << mario.getHp() << endl;
+	cout << mario2.getHp() << endl;
 	return 0;
 }
 
