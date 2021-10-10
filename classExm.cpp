@@ -2,40 +2,44 @@
 
 using namespace std;
 
-class Character
+class Mom
 {
 public:
-	Character(int _hp)
-	{
-		hp = _hp;
-	}
-
-private:
-	int hp;
-
-public:
-	int getHp();
-
-	friend void operator+=(Character& character, int hp);
+	Mom();
+	~Mom();
 };
 
+class Son : public Mom
+{
+public:
+	Son();
+	~Son();
+private:
+};
 
 int main()
 {
-	Character mario(150), mario2(0);
-	mario += 50;
-	mario2 = mario;
+	Son son;
 
-	cout << mario2.getHp() << endl;
 	return 0;
 }
 
-int Character::getHp()
+Mom::Mom()
 {
-	return hp;
+	cout << "엄마 생성자" << endl;
 }
 
-void operator+=(Character& character, int hp)
+Mom::~Mom()
 {
-	character.hp += hp;
+	cout << "엄마 소멸자" << endl;
+}
+
+Son::Son()
+{
+	cout << "아들 생성자" << endl;
+}
+
+Son::~Son()
+{
+	cout << "아들 소멸자" << endl;
 }
