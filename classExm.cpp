@@ -4,12 +4,15 @@ using namespace std;
 
 class Charcter
 {
+public:
+	Charcter();
+	~Charcter();
+	Charcter(int hp);
+	void setHp(int _hp);
+	int getHp();
 private:
 	int hp;
 
-public:
-	void setHp(int _hp);
-	int getHp();
 };
 
 int main()
@@ -18,6 +21,21 @@ int main()
 	mario.setHp(100);
 	cout << mario.getHp() << endl;
 	return 0;
+}
+
+Charcter::Charcter()
+{
+	hp = 100;
+}
+
+Charcter::~Charcter()
+{
+}
+
+
+Charcter::Charcter(int _hp)
+{
+	hp = _hp;
 }
 
 void Charcter::setHp(int _hp)
