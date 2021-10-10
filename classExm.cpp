@@ -15,7 +15,8 @@ private:
 
 public:
 	int getHp();
-	void operator+=(int hp);
+
+	friend void operator+=(Character& character, int hp);
 };
 
 
@@ -33,7 +34,7 @@ int Character::getHp()
 	return hp;
 }
 
-void Character::operator+=(int hp)
+void operator+=(Character& character, int hp)
 {
-	this->hp += hp;
+	character.hp += hp;
 }
