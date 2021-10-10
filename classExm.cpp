@@ -2,44 +2,35 @@
 
 using namespace std;
 
-class Mom
+class Weapon
 {
 public:
-	Mom();
-	~Mom();
+	void Attack()
+	{
+		cout << "무기로 공격" << endl;
+	};
+protected:
+	int power;
 };
 
-class Son : public Mom
+class Knife : public Weapon
 {
 public:
-	Son();
-	~Son();
-private:
+	void Attack()
+	{
+		cout << "칼로 공격" << endl;
+	};
 };
 
 int main()
 {
-	Son son;
+	Weapon* weapon = new Knife();
+
+	((Knife*)weapon)->Attack();
+
+	delete weapon;
 
 	return 0;
 }
 
-Mom::Mom()
-{
-	cout << "엄마 생성자" << endl;
-}
 
-Mom::~Mom()
-{
-	cout << "엄마 소멸자" << endl;
-}
-
-Son::Son()
-{
-	cout << "아들 생성자" << endl;
-}
-
-Son::~Son()
-{
-	cout << "아들 소멸자" << endl;
-}
