@@ -11,6 +11,9 @@ public:
 	void move(int dir);
 	void jump();
 	void hit();
+
+	void speedUp();
+	void obtainItem();
 };
 
 int main()
@@ -19,6 +22,10 @@ int main()
 
 	mario.name = "½´ÆÛ¸¶¸®¿À";
 	mario.jump();
+
+	mario.obtainItem();
+	mario.speed += 10000;
+
 	return 0;
 }
 
@@ -32,4 +39,14 @@ void Charcter::jump()
 
 void Charcter::hit()
 {
+}
+
+void Charcter::speedUp()
+{
+	speed++;
+}
+
+void Charcter::obtainItem()
+{
+	speedUp();
 }
