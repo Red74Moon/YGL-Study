@@ -1,7 +1,8 @@
 #include <iostream>
 
 using namespace std;
-
+//Call by Address 
+//swap(&a, &b);
 int swap(int* a, int* b)
 {
 	int tmp = *a;
@@ -11,12 +12,24 @@ int swap(int* a, int* b)
 	return 0;
 }
 
+
+//Call by Reference
+//swap(a, b);
+int swap(int& a, int& b)
+{
+	int tmp = a;
+	a = b;
+	b = tmp;
+
+	return 0;
+}
+
 int main()
 {
 	int a = 30;
 	int b = 70;
 
-	swap(&a, &b);
+	swap(a, b);
 	cout << a << b << endl;
 
 	return 0;
