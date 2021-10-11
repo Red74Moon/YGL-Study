@@ -2,13 +2,22 @@
 
 using namespace std;
 
+int swap(int* a, int* b)
+{
+	int tmp = *a;
+	*a = *b;
+	*b = tmp;
+
+	return 0;
+}
+
 int main()
 {
-	int* a;
-	int b = 5;
-	a = &b;
+	int a = 30;
+	int b = 70;
 
-	cout << *a;
+	swap(&a, &b);
+	cout << a << b << endl;
 
 	return 0;
 }
