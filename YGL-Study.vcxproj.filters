@@ -45,5 +45,8 @@
     <ClCompile Include="stringExm.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="StringExm08.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
