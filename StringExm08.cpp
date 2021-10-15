@@ -1,18 +1,23 @@
-// strpbrk
+// strtok
 
 #include <iostream>
 #include <cstring>
+
+#include <stdio.h>
 
 using namespace std;
 
 int main()
 {
-	char str[] = "Hello friends of mine.";
+	char str[] = "2021년 10월 15일";
+	char* p;
 
-	char* pPtr = strpbrk(str, "pfmd");
-
-	cout << "찾은 문자 : " << *pPtr << endl;
-	cout << "해당 문자의 인댁스 : " << pPtr - str;
+	p = strtok(str, " ");
+	while (p)
+	{
+		cout << p << endl;
+		p = strtok(0, " ");
+	}
 
 	return 0;
 }
