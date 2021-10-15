@@ -7,7 +7,6 @@ using namespace std;
 
 int main()
 {
-
 	char str[] = "Hello friends of mine.";
 
 	char* pPtr = strpbrk(str, "pfmd");
