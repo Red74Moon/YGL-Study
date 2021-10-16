@@ -41,6 +41,7 @@ int main()
 		line.insert(0, temp);
 		line.append("\n");
 		outputFile << line;
+		cout << line;
 	}
 	inputFile.close();
 	outputFile.close();
