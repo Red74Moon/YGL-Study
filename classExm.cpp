@@ -25,7 +25,6 @@ public:
 	double getGPA();
 };
 
-
 int main()
 {
 	Person person;
@@ -55,7 +54,6 @@ int Person::getID()
 {
 	return identity;
 }
-
 
 void Student::setGPA(double gp)
 {
