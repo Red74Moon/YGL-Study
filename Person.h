@@ -14,6 +14,6 @@ public:
 	Person();
 	Person(long identity);
 	~Person();
-	Person(const Person& person);
+	Person(Person& person);
 	void print() const;
 };

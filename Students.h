@@ -6,7 +6,7 @@
 class Students : public Person
 {
 private:
-	double gpa;
+	double gpa = 0.0;
 public:
 	Students();
 	~Students();

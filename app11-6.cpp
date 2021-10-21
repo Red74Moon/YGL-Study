@@ -3,7 +3,7 @@
 
 int main()
 {
-	Person person(11111111);
+	Person person(111);
 	std::cout << "Person °´Ã¼ÀÇ Á¤º¸ : " << std::endl;
 	person.print();
 	std::cout << std::endl;

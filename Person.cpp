@@ -15,7 +15,7 @@ Person::~Person()
 {
 }
 
-Person::Person(const Person& person)
+Person::Person(Person& person)
 {
 }
 
